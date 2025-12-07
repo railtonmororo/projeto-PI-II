@@ -14,10 +14,13 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     const erroCpf = document.getElementById('cpfErro');
+    const erroSenha = document.getElementById('erroSenha');
+
+    const erroTipo = document.getElementById('erroTipo');
 
     // Validação login
     const form = document.getElementById('cadastroForm');
-    const tipo = document.getElementById('tipoCadastro');
+    const tipo = document.getElementById('tipo');
     if(form) form.addEventListener('submit', e => {
         e.preventDefault();
 
@@ -26,15 +29,34 @@ document.addEventListener('DOMContentLoaded', function() {
             erroCpf.textContent = "CPF inválido. Digite novamente.";
             return;
             
-        }else{
+        }else{ 
                
             erroCpf.textContent = ""; // Limpa a mensagem de erro se o CPF for válido
                    
         }
 
 
-        if(!password.value){ alert('Senha necessária'); return; }
-        if(!tipo.value){ alert('Selecione um tipo'); return; }
+        if(!password.value){
+            erroSenha.textContent ="Senha necessária"; 
+            return; 
+        }else{
+            erroSenha.textContent = ""; // Limpa a mensagem de erro se a senha for válida   
+        }
+
+        if(password.value.length < 5){
+            erroSenha.textContent = "ERRO! A senha deve conter pelo menos 5 caracteres.";
+            return;
+        }else{
+            erroSenha.textContent = ""; // Limpa a mensagem de erro se a senha for válida
+        } 
+
+        if(!tipo.value){ 
+            erroTipo.textContent = "Erro! Selecione um tipo.";
+             return;
+        }else{
+            erroTipo.textContent = ""; // Limpa a mensagem de erro se o tipo for selecionado
+        }
+
         alert('Cadastro realizado com sucesso!');
         form.reset();
     });
