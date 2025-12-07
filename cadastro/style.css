@@ -110,24 +110,39 @@ form input, form select{
 
 .campo-cpf {
     position: relative;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
+    display: flex;
+    flex-direction: column;
    
 }
 
 .caixa-de-senha {
     position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    /*margin-bottom: 5px;*/
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    width: 100%;
+    
 }
 .caixa-de-senha input {
-    padding-right: 40px;
+   /* padding-right: 40px;
+    box-sizing: border-box;*/
+    width: 100%;
+    padding: 1vh 1vw;
+    padding-right: 40px; /* espaço para o ícone */
+    border-radius: 30px;
+    border: 1px solid #93e0e2;
+    outline: none;
+    font-size: 1em;
+    box-sizing: border-box;
 }
 
 .caixa-de-tipo{
+     position: relative;
+    margin-bottom: 5px;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+   
 }
 
 .erro-msg{
@@ -152,12 +167,13 @@ form input, form select{
 
 #togglePasswordCadastro{
     position: absolute;
-    right: 10px;
     top: 50%;
+    right: 12px;
     transform: translateY(-50%);
     cursor: pointer;
     color: #666;
     font-size: 1.2em;
+    z-index: 2;
 }
 
 #togglePasswordCadastro:hover{
