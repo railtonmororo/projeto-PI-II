@@ -13,13 +13,23 @@ document.addEventListener('DOMContentLoaded', function() {
         toggle.classList.toggle("fa-eye-slash");
     });
 
+    const erroCpf = document.getElementById('cpfErro');
+
     // Validação login
     const form = document.getElementById('loginForm');
     if(form) form.addEventListener('submit', e => {
         e.preventDefault();
-        if(!cpfInput.value || cpfInput.value.replace(/\D/g,'').length!==11){
-            alert('CPF inválido'); return;
+        if(!cpfInput.value || !validaCpf(cpfInput.value)){
+           
+            erroCpf.textContent = "Cpf inválido. Digite novamente.";
+            return;
+            
+        }else{
+               
+            erroCpf.textContent = ""; // Limpa a mensagem de erro se o CPF for válido
+                   
         }
+            
         if(!password.value){ alert('Senha necessária'); return; }
         alert('Login realizado com sucesso!');
         form.reset();
