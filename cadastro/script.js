@@ -13,14 +13,26 @@ document.addEventListener('DOMContentLoaded', function() {
         toggle.classList.toggle("fa-eye-slash");
     });
 
-    // Validação cadastro
+    const erroCpf = document.getElementById('cpfErro');
+
+    // Validação login
     const form = document.getElementById('cadastroForm');
     const tipo = document.getElementById('tipoCadastro');
     if(form) form.addEventListener('submit', e => {
         e.preventDefault();
-        if(!cpfInput.value || cpfInput.value.replace(/\D/g,'').length!==11){
-            alert('CPF inválido'); return;
+        
+        if(!cpfInput.value || !validaCpf(cpfInput.value)){
+           
+            erroCpf.textContent = "Cpf inválido. Digite novamente.";
+            return;
+            
+        }else{
+               
+            erroCpf.textContent = ""; // Limpa a mensagem de erro se o CPF for válido
+                   
         }
+
+
         if(!password.value){ alert('Senha necessária'); return; }
         if(!tipo.value){ alert('Selecione um tipo'); return; }
         alert('Cadastro realizado com sucesso!');
