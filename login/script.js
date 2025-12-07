@@ -21,9 +21,9 @@ document.addEventListener('DOMContentLoaded', function() {
         e.preventDefault();
         if(!cpfInput.value || !validaCpf(cpfInput.value)){
            
-            erroCpf.textContent = "Cpf inválido. Digite novamente.";
+            erroCpf.textContent = "CPF inválido. Digite novamente.";
             return;
-            
+
         }else{
                
             erroCpf.textContent = ""; // Limpa a mensagem de erro se o CPF for válido
