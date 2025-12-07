@@ -39,4 +39,54 @@ document.addEventListener('DOMContentLoaded', function() {
         input.value = value;
     }
 
+    // VALIDAÇÃO CPF
+    const validaCpf =(cpf) =>{
+        cpf = cpf.replace(/\D/g, '');
+
+        if(cpf.length !== 11){
+            console.error('CPF Inválido! Tente novammente.');
+            return false;
+        }
+
+        if (/^(\d)\1{10}$/.test(cpf)){
+             return false;
+        }
+
+        const proximoDigitoVerificador =(cpfIncompleto) =>{
+            let somatoria = 0
+
+            for (let i=0; i < cpfIncompleto.length; i++){
+                let digitoAtual = cpfIncompleto.charAt(i);
+
+                let constante = (cpfIncompleto.length + 1 - i);
+
+                somatoria += Number(digitoAtual) * constante;
+            
+            }
+
+            const resto = somatoria % 11;
+            
+
+            return resto < 2 ? "0" : (11 - resto).toString();
+
+        }
+
+        let primeiroDigitoVerificador = proximoDigitoVerificador(cpf.substring(0,9));
+        let segundoDigitoVerificador = proximoDigitoVerificador(cpf.substring(0,9) + primeiroDigitoVerificador);
+            
+
+        let cpfCorreto = cpf.substring(0,9) + primeiroDigitoVerificador + segundoDigitoVerificador;
+
+
+        if(cpf !== cpfCorreto) {
+            console.error('CPF inválido. Tente novamente.');
+            return false;
+        }
+
+        console.log("CPF Válido!");
+        return true;
+
+    }
+         
+
 });
