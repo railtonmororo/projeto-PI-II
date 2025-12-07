@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Login</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="../login/script.js"></script>
+
+</head>
+<body>
+
+    <div class="container">
+        
+        <div class="caixa-esquerda"></div>
+
+        <div class="caixa-direita">
+            <div class="top-buttons">
+                <button id="btnLogin" class=" btn-esquerdo active" >Login</button>
+                <button class="btn-direito" onclick="location.href='../cadastro/cadastro.html'">Cadastrar-se</button>
+            </div>
+
+            <form id="loginForm">
+                <div class="group-imput">
+                    <label>CPF</label>
+                    <div class="campo-cpf">
+                        <input type="text" id="cpf" placeholder="Digite o seu CPF" maxlength="14">
+                    </div>
+                </div>
+                
+                
+                <div class="group-imput">
+                    <label>Senha</label>
+                    <div class="caixa-de-senha">
+                     
+                        <input type="password" id="password" placeholder="Digite a sua senha" >
+                        <i class="fas fa-eye icone-do-olho" id="togglePassword"></i>
+                    </div>
+                </div>
+                
+
+                <div class="opcoes">
+                    <label class="lembrar-se">
+                        <input type="checkbox"> Lembrar-se
+                    </label>
+                    <a href="#" class="esquecida">Esqueceu a senha?</a>
+                </div>
+
+                <button type="submit" class="botão-de-login">Login</button>
+            </form>
+        </div>
+
+    </div>
+    
+</body>
+</html>
