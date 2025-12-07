@@ -52,9 +52,11 @@ body{
     margin-bottom: 3vh;
     background: #9ce0e3;
     border-radius: 40px;
-    padding: 0.5vh;
-    height: 6vh;
+    padding: 0.8vh;
+    min-height: 45px;
+    height: auto;
     gap: 1vw;
+    align-items: center;
 }
 
 .top-buttons button {
@@ -214,7 +216,7 @@ form input{
 }
 
 
-/* MEDIA QUERIES PARA CELULAR 
+/* MEDIA QUERIES PARA CELULAR */
 
 @media screen and (max-width: 768px) {
     .container {
@@ -227,9 +229,12 @@ form input{
         width: 100%;
         min-width: auto;
     }
-
+    .top-buttons{
+        flex-direction: column;
+        gap: 1vh;
+    }
     .top-buttons button {
-        font-size: 0.9em;
+        font-size: 0.8em;
         padding: 1vh 0;
     }
 
