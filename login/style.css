@@ -27,7 +27,6 @@ body{
     flex: 1 1 45%;
     min-width: 250px;
     height: 50vh;
-    
     background: #dcdcdc;
     border-radius: 8px;
 }
@@ -47,20 +46,22 @@ body{
 /*BOTÕES SUPERIORES*/
 .top-buttons{
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
+    justify-content: space-between;
     width: 100%;
-    padding: 8px;
-    border-radius: 40px;
+    margin-bottom: 3vh;
     background: #9ce0e3;
+    border-radius: 40px;
+    padding: 8px;
+    align-items: center;
+    height: auto;
+    gap: 10px;
    
    
 
 }
 
 .top-buttons button {
-    flex: 1 1 45%;         /* ocupa até 45% mas pode encolher */
+    flex: 1 ;       
     min-width: 120px;      /* largura mínima para não sumir */
     padding: 10px;
     font-size: 1em;
@@ -217,7 +218,7 @@ form input{
 }
 
 
-/* MEDIA QUERIES PARA CELULAR */
+/* MEDIA QUERIES PARA CELULAR 
 
 @media screen and (max-width: 768px) {
     .container {
