@@ -20,10 +20,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const tipo = document.getElementById('tipoCadastro');
     if(form) form.addEventListener('submit', e => {
         e.preventDefault();
-        
+
         if(!cpfInput.value || !validaCpf(cpfInput.value)){
            
-            erroCpf.textContent = "Cpf inválido. Digite novamente.";
+            erroCpf.textContent = "CPF inválido. Digite novamente.";
             return;
             
         }else{
