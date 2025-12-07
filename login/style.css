@@ -52,20 +52,20 @@ body{
     margin-bottom: 3vh;
     background: #9ce0e3;
     border-radius: 40px;
-    padding: 0.4vh;
+    padding: 8px;
     min-height: 45px;
     height: auto;
-    gap: 1vw;
-    align-items: center;
+    gap: 10px;
+
 }
 
 .top-buttons button {
     flex: 1;
-    padding: 0.8vh 0;
+    padding: 10px;
+    font-size: 1em;
     border-radius: 40px;
     border: none;
     cursor: pointer;
-    font-size: 1em;
     background: #d6f5f6;
     color: #555;
     transition: 0.3s;
@@ -81,7 +81,7 @@ body{
     background: #51cacc;
     color: white;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    transform: scale(1.05);
+    transform: scale(1.03);
 }
 
 
