@@ -47,20 +47,21 @@ body{
 /*BOTÕES SUPERIORES*/
 .top-buttons{
     display: flex;
-    justify-content: space-between;
-    width: 100%;
-    margin-bottom: 3vh;
-    background: #9ce0e3;
-    border-radius: 40px;
-    padding: 8px;
-    min-height: 45px;
-    height: auto;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 10px;
+    width: 100%;
+    padding: 8px;
+    border-radius: 40px;
+    background: #9ce0e3;
+   
+   
 
 }
 
 .top-buttons button {
-    flex: 1;
+    flex: 1 1 45%;         /* ocupa até 45% mas pode encolher */
+    min-width: 120px;      /* largura mínima para não sumir */
     padding: 10px;
     font-size: 1em;
     border-radius: 40px;
