@@ -34,7 +34,7 @@ body{
 /*ÁREA DIREITA*/
 
 .caixa-direita{
-    flex: 1 1 45%; /* ocupa 45% do container, mas pode encolher */
+    flex: 1 1 45%; 
     min-width: 250px;
     padding: 3vw;
     background: #fff;
