@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if(!cpfInput.value || !validaCpf(cpfInput.value)){
            
             erroCpf.textContent = "CPF inválido. Digite novamente.";
-            return;
+           //return;
             
         }else{ 
                
@@ -38,14 +38,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
         if(!password.value){
             erroSenha.textContent ="Senha necessária"; 
-            return; 
+           // return; 
         }else{
             erroSenha.textContent = ""; // Limpa a mensagem de erro se a senha for válida   
         }
 
         if(password.value.length < 5){
             erroSenha.textContent = "ERRO! A senha deve conter pelo menos 5 caracteres.";
-            return;
+            //return;
         }else{
             erroSenha.textContent = ""; // Limpa a mensagem de erro se a senha for válida
         } 
