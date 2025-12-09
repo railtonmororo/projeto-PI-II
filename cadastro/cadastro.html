@@ -11,51 +11,54 @@
 <body>
 
     <div class="container">
-        <div class="caixa-esquerda"></div>
+      <!-- <div class="caixa-esquerda"></div> -->
 
         <div class="caixa-direita">
 
-            <div class="top-buttons">
-                <button class="btn-esquerdo" onclick="location.href='../login/login.html'">Login</button>
-                <button class="btn-direito active">Cadastrar-se</button>
+            <div class="box-form">
+
+                <div class="top-buttons">Cadastrar-se</div>
+
+                <form id="cadastroForm">
+                
+                    <div class="group-imput">
+                        <label>CPF</label>
+                        <div class="campo-cpf">
+                            <input type="text" id="cpfCadastro" class="input-style" placeholder="Digite o seu CPF" maxlength="14">
+                            <span id="cpfErro" class="erro-msg"></span>
+                        </div>
+                    </div>
+
+                    <div class="group-imput">
+                        <label>Senha</label>
+                        <div class="caixa-de-senha">
+                            <input type="password" id="senhaCadastro" class="input-style" placeholder="Digite a sua senha">
+                            <i class="fas fa-eye icone-do-olho" id="togglePasswordCadastro"></i>
+                        </div>
+                        <span id="erroSenha" class="erro-msg"></span>
+                    </div>
+
+                    <div class="group-imput">
+                        <label>Tipo</label>
+                        <div class="caixa-de-tipo">
+                            <select id="tipo" class="input-style" >
+                                <option value="" selected>Selecione o tipo</option>
+                                <option value="administrador">Administrador</option>
+                                <option value="tecnico">Técnico</option>
+                                <option value="usuario">Usuário Comum</option>
+                            </select>
+                            <span id="erroTipo" class="erro-msg"></span>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn">Cadastrar</button>
+
+                </form>
+
             </div>
 
-            <form id="cadastroForm">
-                <div class="group-imput">
-                    <label>CPF</label>
-                    <div class="campo-cpf">
-                        <input type="text" id="cpfCadastro" placeholder="Digite o seu CPF" maxlength="14">
-                        <span id="cpfErro" class="erro-msg"></span>
-                    </div>
-                </div>
-
-               
-
-                <div class="group-imput">
-                    <label>Senha</label>
-                    <div class="caixa-de-senha">
-                        <input type="password" id="senhaCadastro" placeholder="Sua senha deve conter pelo menos 5 caracteres">
-                        <i class="fas fa-eye icone-do-olho" id="togglePasswordCadastro"></i>
-                    </div>
-                    <span id="erroSenha" class="erro-msg"></span>
-                </div>
-
-                 <div class="group-imput">
-                    <label>Tipo</label>
-                    <div class="caixa-de-tipo">
-                        <select id="tipo">
-                            <option value="" disabled selected>Selecione o tipo</option>
-                            <option value="administrador">Administrador</option>
-                            <option value="tecnico">Técnico</option>
-                            <option value="usuario">Usuário Comum</option>
-                        </select>
-                        <span id="erroTipo" class="erro-msg"></span>
-                    </div>
-                </div>
-
-                <button type="submit" class="cadastrar">Cadastrar</button>
-            </form>
         </div>
+
     </div>
 
 </body>
