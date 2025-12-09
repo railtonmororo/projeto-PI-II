@@ -47,15 +47,17 @@ body{
 /*BOTÕES SUPERIORES*/
 .top-buttons{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     width: 100%;
     margin-bottom: 3vh;
-    background: #9ce0e3;
+    background: #49BBBD;
     border-radius: 40px;
     padding: 8px;
+    text-align: center;
     align-items: center;
     height: auto;
     gap: 10px;
+    color: #fff;
 
 }
 
